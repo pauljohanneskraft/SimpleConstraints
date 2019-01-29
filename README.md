@@ -22,7 +22,7 @@ pod 'SimpleConstraints'
 
 ## Author
 
-pauljohanneskraft, pauljohanneskraft@users.noreply.github.com
+[pauljohanneskraft](https://github.com/pauljohanneskraft)
 
 ## License
 
