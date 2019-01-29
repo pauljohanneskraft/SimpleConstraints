@@ -1,0 +1,6 @@
+framework module SimpleConstraints {
+  umbrella header "SimpleConstraints-umbrella.h"
+
+  export *
+  module * { export * }
+}

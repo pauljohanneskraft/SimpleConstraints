@@ -1,5 +1,5 @@
 import XCTest
-import SwiftyConstraints
+import SimpleConstraints
 
 class Tests: XCTestCase {
     

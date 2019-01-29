@@ -1,27 +1,16 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - SwiftyConstraints (0.1.0)
+  - SimpleConstraints (0.1.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (~> 2.1.4)
-  - SwiftyConstraints (from `../`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - FBSnapshotTestCase
+  - SimpleConstraints (from `../`)
 
 EXTERNAL SOURCES:
-  SwiftyConstraints:
+  SimpleConstraints:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  SwiftyConstraints: c0acf42b8163aa5ae19fabc2e8c63d1978d3333d
+  SimpleConstraints: ef7c100f203485366b19ff58366402ec385a194a
 
-PODFILE CHECKSUM: 91a884487626b9744eebf28d074b031b27db5393
+PODFILE CHECKSUM: fec610780bf55c982b4eb31de0feca248d8bccbb
 
 COCOAPODS: 1.5.3

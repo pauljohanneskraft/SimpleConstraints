@@ -1,11 +1,11 @@
 use_frameworks!
 
-target 'SwiftyConstraints_Example' do
-  pod 'SwiftyConstraints', :path => '../'
+target 'SimpleConstraints_Example' do
+  pod 'SimpleConstraints', :path => '../'
 
-  target 'SwiftyConstraints_Tests' do
+  target 'SimpleConstraints_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+    
   end
 end

@@ -1,6 +1,0 @@
-framework module Pods_SwiftyConstraints_Example {
-  umbrella header "Pods-SwiftyConstraints_Example-umbrella.h"
-
-  export *
-  module * { export * }
-}
