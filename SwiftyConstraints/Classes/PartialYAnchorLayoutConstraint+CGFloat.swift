@@ -15,6 +15,6 @@ extension PartialYAnchorLayoutConstraint {
     }
 
     public static func - (lhs: PartialYAnchorLayoutConstraint, rhs: CGFloat) -> PartialYAnchorLayoutConstraint {
-        return PartialYAnchorLayoutConstraint(anchor: lhs.anchor, constant: lhs.constant - rhs)
+        return lhs + (-rhs)
     }
 }

@@ -53,7 +53,7 @@ extension NSLayoutDimension {
     }
 
     public static func >= (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
-        return lhs.constraint(equalToConstant: rhs)
+        return lhs.constraint(greaterThanOrEqualToConstant: rhs)
     }
 
     public static func >= (lhs: CGFloat, rhs: NSLayoutDimension) -> NSLayoutConstraint {
@@ -61,7 +61,7 @@ extension NSLayoutDimension {
     }
 
     public static func <= (lhs: NSLayoutDimension, rhs: CGFloat) -> NSLayoutConstraint {
-        return lhs.constraint(equalToConstant: rhs)
+        return lhs.constraint(lessThanOrEqualToConstant: rhs)
     }
 
     public static func <= (lhs: CGFloat, rhs: NSLayoutDimension) -> NSLayoutConstraint {

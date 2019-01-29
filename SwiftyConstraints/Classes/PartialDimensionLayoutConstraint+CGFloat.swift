@@ -9,7 +9,7 @@
 
 extension CGFloat {
     public static func + (lhs: PartialDimensionLayoutConstraint, rhs: CGFloat) -> PartialDimensionLayoutConstraint {
-        return lhs
+        return PartialDimensionLayoutConstraint(dimension: lhs.dimension, multiplier: lhs.multiplier, constant: lhs.constant + rhs)
     }
 
     public static func + (lhs: CGFloat, rhs: PartialDimensionLayoutConstraint) -> PartialDimensionLayoutConstraint {
@@ -17,7 +17,7 @@ extension CGFloat {
     }
 
     public static func - (lhs: PartialDimensionLayoutConstraint, rhs: CGFloat) -> PartialDimensionLayoutConstraint {
-        return lhs
+        return lhs + (-rhs)
     }
 
     public static func - (lhs: CGFloat, rhs: PartialDimensionLayoutConstraint) -> PartialDimensionLayoutConstraint {
@@ -25,7 +25,7 @@ extension CGFloat {
     }
 
     public static func * (lhs: PartialDimensionLayoutConstraint, rhs: CGFloat) -> PartialDimensionLayoutConstraint {
-        return lhs
+        return PartialDimensionLayoutConstraint(dimension: lhs.dimension, multiplier: lhs.multiplier * rhs, constant: lhs.constant * rhs)
     }
 
     public static func * (lhs: CGFloat, rhs: PartialDimensionLayoutConstraint) -> PartialDimensionLayoutConstraint {
@@ -33,7 +33,7 @@ extension CGFloat {
     }
 
     public static func / (lhs: PartialDimensionLayoutConstraint, rhs: CGFloat) -> PartialDimensionLayoutConstraint {
-        return lhs
+        return lhs * (1 / rhs)
     }
 }
 

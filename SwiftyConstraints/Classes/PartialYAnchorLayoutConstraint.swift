@@ -6,11 +6,6 @@
 //
 
 public struct PartialYAnchorLayoutConstraint {
-    public let anchor: NSLayoutYAxisAnchor
-    public let constant: CGFloat
-
-    internal init(anchor: NSLayoutYAxisAnchor, constant: CGFloat = 0) {
-        self.anchor = anchor
-        self.constant = constant
-    }
+    let anchor: NSLayoutYAxisAnchor
+    let constant: CGFloat
 }
