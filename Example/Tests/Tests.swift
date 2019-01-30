@@ -117,6 +117,7 @@ class Tests: XCTestCase {
 
         testEquality(simple: 8 == view0.widthAnchor / 3,
                      normal: view0.widthAnchor.constraint(equalToConstant: 8 * 3))
+        
     }
 
     // MARK: - Helpers
