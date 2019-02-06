@@ -48,7 +48,7 @@ extension PartialDimensionLayoutConstraint {
 
 extension CGFloat {
     public static func == (lhs: PartialDimensionLayoutConstraint, rhs: CGFloat) -> NSLayoutConstraint {
-        return lhs.dimension.constraint(equalToConstant: rhs / lhs.multiplier)
+        return lhs.dimension.constraint(equalToConstant: (rhs - lhs.constant) / lhs.multiplier)
     }
 
     public static func == (lhs: CGFloat, rhs: PartialDimensionLayoutConstraint) -> NSLayoutConstraint {
@@ -56,7 +56,7 @@ extension CGFloat {
     }
 
     public static func <= (lhs: PartialDimensionLayoutConstraint, rhs: CGFloat) -> NSLayoutConstraint {
-        return lhs.dimension.constraint(lessThanOrEqualToConstant: rhs / lhs.multiplier)
+        return lhs.dimension.constraint(lessThanOrEqualToConstant: (rhs - lhs.constant) / lhs.multiplier)
     }
 
     public static func <= (lhs: CGFloat, rhs: PartialDimensionLayoutConstraint) -> NSLayoutConstraint {
@@ -64,7 +64,7 @@ extension CGFloat {
     }
 
     public static func >= (lhs: PartialDimensionLayoutConstraint, rhs: CGFloat) -> NSLayoutConstraint {
-        return lhs.dimension.constraint(greaterThanOrEqualToConstant: rhs / lhs.multiplier)
+        return lhs.dimension.constraint(greaterThanOrEqualToConstant: (rhs - lhs.constant) / lhs.multiplier)
     }
 
     public static func >= (lhs: CGFloat, rhs: PartialDimensionLayoutConstraint) -> NSLayoutConstraint {
