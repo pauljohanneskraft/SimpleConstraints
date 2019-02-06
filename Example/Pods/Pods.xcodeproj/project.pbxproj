@@ -12,6 +12,7 @@
 		47ECB1F89CF3891275FBD03C2E5AE55B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		607DED978C516855C90C73EF5D39C840 /* Pods-SimpleConstraints_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7355A64D58C1190CAD3C7A5EF555BBF7 /* Pods-SimpleConstraints_Tests-dummy.m */; };
 		6E7996C68FD4431E1E36D5FF006A3561 /* SimpleConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2D37DFD78FAAF4F58C45B6C0BB4CBC /* SimpleConstraints-dummy.m */; };
+		9B225880220B413C00EAAFB6 /* PartialDimensionLayoutConstraint+NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22587F220B413C00EAAFB6 /* PartialDimensionLayoutConstraint+NSLayoutConstraint.swift */; };
 		9B484F552200912000C0551E /* NSLayoutDimension+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B484F42220090F600C0551E /* NSLayoutDimension+CGFloat.swift */; };
 		9B484F562200912000C0551E /* NSLayoutXAxisAnchor+CGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B484F41220090F600C0551E /* NSLayoutXAxisAnchor+CGFloat.swift */; };
 		9B484F572200912000C0551E /* NSLayoutXAxisAnchor+PartialXAnchorLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B484F3E220090F500C0551E /* NSLayoutXAxisAnchor+PartialXAnchorLayoutConstraint.swift */; };
@@ -71,6 +72,7 @@
 		767B6235AE6F040AACA090CE6306F11B /* Pods-SimpleConstraints_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleConstraints_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8724B894DE99DEB543EC6C573DBEA1EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F2D21142BAF5F9C0226DC2C06554530 /* Pods-SimpleConstraints_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleConstraints_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		9B22587F220B413C00EAAFB6 /* PartialDimensionLayoutConstraint+NSLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "PartialDimensionLayoutConstraint+NSLayoutConstraint.swift"; path = "SimpleConstraints/Classes/PartialDimensionLayoutConstraint+NSLayoutConstraint.swift"; sourceTree = "<group>"; };
 		9B484F39220090F500C0551E /* PartialXAnchorLayoutConstraint^2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PartialXAnchorLayoutConstraint^2.swift"; path = "SimpleConstraints/Classes/PartialXAnchorLayoutConstraint^2.swift"; sourceTree = "<group>"; };
 		9B484F3A220090F500C0551E /* PartialYAnchorLayoutConstraint^2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "PartialYAnchorLayoutConstraint^2.swift"; path = "SimpleConstraints/Classes/PartialYAnchorLayoutConstraint^2.swift"; sourceTree = "<group>"; };
 		9B484F3B220090F500C0551E /* PartialXAnchorLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartialXAnchorLayoutConstraint.swift; path = SimpleConstraints/Classes/PartialXAnchorLayoutConstraint.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				9B484F46220090F600C0551E /* PartialDimensionLayoutConstraint.swift */,
 				9B484F3C220090F500C0551E /* PartialDimensionLayoutConstraint^2.swift */,
 				9B484F3D220090F500C0551E /* PartialDimensionLayoutConstraint+CGFloat.swift */,
+				9B22587F220B413C00EAAFB6 /* PartialDimensionLayoutConstraint+NSLayoutConstraint.swift */,
 				9B484F3B220090F500C0551E /* PartialXAnchorLayoutConstraint.swift */,
 				9B484F39220090F500C0551E /* PartialXAnchorLayoutConstraint^2.swift */,
 				9B484F3F220090F500C0551E /* PartialXAnchorLayoutConstraint+CGFloat.swift */,
@@ -436,6 +439,7 @@
 				9B484F5D2200912000C0551E /* PartialXAnchorLayoutConstraint.swift in Sources */,
 				9B484F5F2200912000C0551E /* PartialXAnchorLayoutConstraint+CGFloat.swift in Sources */,
 				9B484F5C2200912000C0551E /* PartialDimensionLayoutConstraint+CGFloat.swift in Sources */,
+				9B225880220B413C00EAAFB6 /* PartialDimensionLayoutConstraint+NSLayoutConstraint.swift in Sources */,
 				9B484F572200912000C0551E /* NSLayoutXAxisAnchor+PartialXAnchorLayoutConstraint.swift in Sources */,
 				9BEC53C922018F49003DF62C /* NSLayoutXAxisAnchor^2.swift in Sources */,
 				9BEC53CB22018F75003DF62C /* NSLayoutYAxisAnchor^2.swift in Sources */,

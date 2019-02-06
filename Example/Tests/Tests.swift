@@ -106,6 +106,18 @@ class Tests: XCTestCase {
         testEquality(simple: view0.heightAnchor == 5,
                      normal: view0.heightAnchor.constraint(equalToConstant: 5))
 
+        testEquality(simple: view0.heightAnchor + 5 == 5,
+                     normal: view0.heightAnchor.constraint(equalToConstant: 0))
+
+        testEquality(simple: view0.heightAnchor - (-5) == view1.widthAnchor + 5,
+                     normal: view0.heightAnchor.constraint(equalTo: view1.widthAnchor))
+
+        testEquality(simple: -(view0.heightAnchor - (-5)) >= -(view1.widthAnchor + 5),
+                     normal: view0.heightAnchor.constraint(greaterThanOrEqualTo: view1.widthAnchor))
+
+        testEquality(simple: view0.heightAnchor - (-5) <= 5 + view1.widthAnchor,
+                     normal: view0.heightAnchor.constraint(lessThanOrEqualTo: view1.widthAnchor))
+
         testEquality(simple: 4 == view0.widthAnchor,
                      normal: view0.widthAnchor.constraint(equalToConstant: 4))
 
@@ -115,9 +127,44 @@ class Tests: XCTestCase {
         testEquality(simple: 8 <= view0.widthAnchor,
                      normal: view0.widthAnchor.constraint(greaterThanOrEqualToConstant: 8))
 
-        testEquality(simple: 8 == view0.widthAnchor / 3,
-                     normal: view0.widthAnchor.constraint(equalToConstant: 8 * 3))
-        
+        testEquality(simple: 8 == (view0.widthAnchor / 3) + 2,
+                     normal: view0.widthAnchor.constraint(equalToConstant: (8 - 2) * 3))
+
+        testEquality(simple: 16 <= 2 * ((view0.widthAnchor / 3) + 2),
+                     normal: view0.widthAnchor.constraint(greaterThanOrEqualToConstant: (8 - 2) * 3))
+
+        testEquality(simple: 8 <= (((view0.widthAnchor / 3) + 2) / 0.5) - 8,
+                     normal: view0.widthAnchor.constraint(greaterThanOrEqualToConstant: (8 - 2) * 3))
+
+        testEquality(simple: 8 >= 2 + (view0.widthAnchor / 3),
+                     normal: view0.widthAnchor.constraint(lessThanOrEqualToConstant: (8 - 2) * 3))
+
+        testEquality(simple: view0.widthAnchor <= view1.widthAnchor,
+                     normal: view0.widthAnchor.constraint(lessThanOrEqualTo: view1.widthAnchor))
+
+        testEquality(simple: view0.widthAnchor >= view1.widthAnchor,
+                     normal: view0.widthAnchor.constraint(greaterThanOrEqualTo: view1.widthAnchor))
+
+        testEquality(simple: view0.widthAnchor == view1.widthAnchor,
+                     normal: view0.widthAnchor.constraint(equalTo: view1.widthAnchor))
+
+        testEquality(simple: 0 - view0.widthAnchor == -view1.widthAnchor,
+                     normal: view0.widthAnchor.constraint(equalTo: view1.widthAnchor))
+
+        testEquality(simple: 2 - (view0.widthAnchor + 2) == -view1.widthAnchor,
+                     normal: view0.widthAnchor.constraint(equalTo: view1.widthAnchor))
+
+        testEquality(simple: view0.widthAnchor == 0.5 * view1.widthAnchor,
+                     normal: view1.widthAnchor.constraint(equalTo: view0.widthAnchor, multiplier: 2))
+
+        testEquality(simple: view0.widthAnchor == (view1.widthAnchor * 0.5) - 5,
+                     normal: view1.widthAnchor.constraint(equalTo: view0.widthAnchor, multiplier: 2, constant: 10))
+
+        testEquality(simple: view0.widthAnchor >= (view1.widthAnchor * 0.5) - 5,
+                     normal: view1.widthAnchor.constraint(lessThanOrEqualTo: view0.widthAnchor, multiplier: 2, constant: 10))
+
+        testEquality(simple: view0.widthAnchor <= (view1.widthAnchor * 0.5) - 5,
+                     normal: view1.widthAnchor.constraint(greaterThanOrEqualTo: view0.widthAnchor, multiplier: 2, constant: 10))
     }
 
     // MARK: - Helpers
@@ -138,7 +185,10 @@ class Tests: XCTestCase {
         let normalDescription = description(of: normal)
 
         print(simpleDescription)
-        XCTAssertEqual(simpleDescription, normalDescription)
+        guard simpleDescription == normalDescription else {
+            XCTAssertEqual(simpleDescription, normalDescription)
+            return
+        }
 
         simple.activate()
         XCTAssert(simple.isActive)
