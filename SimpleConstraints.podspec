@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SimpleConstraints'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'SimpleConstraints makes it easier and more intuitive to create NSLayoutConstraints.'
 
   s.description      = <<-DESC
